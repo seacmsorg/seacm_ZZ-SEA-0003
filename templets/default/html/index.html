@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+{seacms:load block/inc_header.html}
+<title>{seacms:sitename} - 在线免费高清电影！</title>
+<meta name="keywords" content="电影,视频大全,在线高清电影,付费电影,免费电影,剧集,在线观看,VIP高清电影直播">
+<meta name="description" content="番茄影视，是专门做剧集,电影等在线播放服务，本页面提供电影的相关内容。">
+<script type="text/javascript">if(document.cookie.match(new RegExp('(^| )fed_color=([^;]*)(;|$)')) != null) {var color = document.cookie.match(new RegExp('(^| )fed_color=([^;]*)(;|$)'));if(color[2] == 'white') {var elementid = document.getElementById('fed-colo-color');if(elementid) elementid.parentNode.removeChild(elementid);} else if(!document.getElementById('fed-colo-color')) {var style = document.createElement('link');style.type = 'text/css';style.rel = 'stylesheet';style.id = 'fed-colo-color';style.href = '/zuoz/css/' + unescape(color[2]) + '.css?v=3.1.5';document.getElementsByTagName('head').item(0).appendChild(style);} else document.getElementById('fed-colo-color').href = '/zuoz/css/' + unescape(color[2]) + '.css?v=3.1.5';}</script>
+</head><body class="fed-min-width">
+{seacms:top}
+<div class="fed-main-info fed-min-width">
+  <div class="fed-part-case">
+    <div class="fed-navs-button fed-event fed-part-rows fed-back-whits fed-line-top fed-hide-sm"> <a class="fed-part-search fed-visible fed-text-center fed-font-xii fed-rims-info fed-text-disad fed-icon-font fed-icon-sousuo" href="javascript:;"> 点我搜索,尽量别写错字,不然搜不到哦</a> </div>
+    <div class="fed-swip-container fed-part-rows">
+      <ul class="fed-swip-wrapper fed-font-size">
+        {seacms:videolist type=all num=10 commend=5 order=time}
+        <li class="fed-swip-slide fed-marg-top"><a class="fed-list-pics fed-part-5by2 fed-swip-lazy" href="[videolist:link]" data-background="[videolist:spic]">
+          <div class="fed-swip-title fed-text-white fed-part-eone"> <span class="fed-part-eone fed-font-xviii fed-swip-head">[videolist:name]</span> <span class="fed-part-eone fed-font-xii">[videolist:note]</span> </div>
+          </a></li>
+        {/seacms:videolist}
+      </ul>
+      <div class="fed-swip-pagin fed-font-size fed-text-right"></div>
+      <a class="fed-swip-next fed-text-white fed-text-center fed-hide-xs fed-icon-font fed-icon-you" href="javascript:;"></a> <a class="fed-swip-prev fed-text-white fed-text-center fed-hide-xs fed-icon-font fed-icon-zuo" href="javascript:;"></a> </div>
+    <div class="fed-back-whits fed-show-xs-block fed-hide-sm">
+      <ul class="fed-part-rows">
+        {seacms:arealist areatype=1,2,3,4}
+        <li class="fed-padding-x fed-col-xs3 fed-part-rows fed-text-center fed-line-top fed-line-right"><a href="[arealist:link]">[arealist:typename]</li>
+        {/seacms:arealist}
+      </ul>
+    </div>
+    <div class="fed-part-layout fed-back-whits">
+      <div class="fed-list-head fed-part-rows fed-padding">
+        <h2 class="fed-font-xvi">最新视频</h2>
+        <ul class="fed-part-tips fed-padding">
+          <li>今日更新 <span class="fed-text-green">{seacms:daycount}</span> 部  共 <span class="fed-text-green">{seacms:allcount} </span>部</li><li><a class="fed-more" href="/allmovie.html">更多</a></li>
+
+        </ul>
+      </div>
+      <ul class="fed-list-info fed-part-rows">
+        {seacms:videolist type=all num=12 order=time}
+        <li class="fed-list-item fed-padding fed-col-xs4 fed-col-sm3 fed-col-md2"><a class="fed-list-pics fed-lazy fed-part-2by3" href="[videolist:link]" data-original="[videolist:pic]"><span class="fed-list-play fed-hide-xs"></span><span class="fed-list-score fed-font-xii fed-back-green">[videolist:score]</span><span class="fed-list-remarks fed-font-xii fed-text-white fed-text-center">[videolist:note]</span></a><a class="fed-list-title fed-font-xiv fed-text-center fed-text-sm-left fed-visible fed-part-eone" href="[videolist:link]">[videolist:name]</a><span class="fed-list-desc fed-font-xii fed-visible fed-part-eone fed-text-muted fed-hide-xs fed-show-sm-block">[videolist:nolinkactor]</span></li>
+        {/seacms:videolist}
+      </ul>
+    </div>
+    {seacms:menulist type=top}
+    <div class="fed-list-home fed-part-layout fed-back-whits fed-part-rows">
+      <div class="fed-list-head fed-part-rows fed-padding">
+        <h2 class="fed-font-xvi">[menulist:typename]</h2>
+        <ul class="fed-part-tips fed-padding">
+          {seacms:smallmenulist type=[menulist:typeid]}
+          <li class="fed-hide-xs"><a href="[smallmenulist:link]">[smallmenulist:typename]</a>/</li>
+          {/seacms:smallmenulist}
+          <li><a class="fed-more" href="[menulist:link]">更多</a></li>
+        </ul>
+      </div>
+      <div class="fed-padding fed-col-sx12 fed-col-md5">
+        <div class="fed-swip-container fed-part-rows">
+          <ul class="fed-swip-wrapper fed-font-size">
+            {seacms:videolist type=[menulist:typeid] num=3 order=hit}
+            <li class="fed-swip-slide"><a class="fed-list-pics fed-part-3by2 fed-swip-lazy" href="[videolist:link]" data-background="[videolist:pic]">
+              <div class="fed-swip-title fed-text-white fed-part-eone"> <span class="fed-part-eone fed-font-xviii fed-swip-head">[videolist:name]</span> <span class="fed-part-eone fed-font-xii">[videolist:note]</span> </div>
+              </a></li>
+            {/seacms:videolist}
+          </ul>
+          <div class="fed-swip-pagin fed-font-size fed-text-right"></div>
+          <a class="fed-swip-next fed-text-white fed-text-center fed-hide-xs fed-icon-font fed-icon-you" href="javascript:;"></a> <a class="fed-swip-prev fed-text-white fed-text-center fed-hide-xs fed-icon-font fed-icon-zuo" href="javascript:;"></a> </div>
+        <div class="fed-list-info fed-list-rank fed-part-rows fed-hide-xs fed-hide-sm fed-show-md-block">
+          <h2 class="fed-list-head fed-part-rows fed-font-xvi">本周热门<a class="fed-part-tips fed-font-xiv" href="[menulist:link]">更多</a></h2>
+          <div class="fed-col-md4 fed-list-ones"> {seacms:videolist type=[menulist:typeid] num=1 order=weekhit} <a class="fed-list-pics fed-lazy fed-part-2by3" href="[videolist:link]" data-original="[videolist:pic]"><span class="fed-list-play fed-hide-xs"></span><span class="fed-list-remarks fed-font-xii fed-text-white fed-text-center">[videolist:score]分</span></a> {/seacms:videolist} </div>
+          <div class="fed-col-md8">
+            <ul class="fed-part-rows">
+              {seacms:videolist type=[menulist:typeid] num=7 order=weekhit}
+              <li class="fed-part-eone"><a href="[videolist:link]"><span class="fed-part-nums fed-part-num[videolist:i]">[videolist:i]</span>[videolist:name]<span class="fed-part-tips fed-text-green">[videolist:score]分</span></a></li>
+              {/seacms:videolist}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="fed-col-sx12 fed-col-md7">
+        <ul class="fed-list-info fed-part-rows">
+          {seacms:videolist type=[menulist:typeid] num=6 order=time}
+          <li class="fed-list-item fed-padding fed-col-xs4 fed-col-sm3 fed-col-md3"><a class="fed-list-pics fed-lazy fed-part-2by3" href="[videolist:link]" data-original="[videolist:pic]"><span class="fed-list-play fed-hide-xs"></span><span class="fed-list-score fed-font-xii fed-back-green">[videolist:score]</span><span class="fed-list-remarks fed-font-xii fed-text-white fed-text-center">[videolist:note]</span></a><a class="fed-list-title fed-font-xiv fed-text-center fed-text-sm-left fed-visible fed-part-eone" href="[videolist:link]">[videolist:name]</a><span class="fed-list-desc fed-font-xii fed-visible fed-part-eone fed-text-muted fed-hide-xs fed-show-sm-block">[videolist:nolinkactor]</span></li>
+          {/seacms:videolist} 
+          {seacms:videolist type=[menulist:typeid] num=2 order=time start=7}
+          <li class="fed-list-item fed-padding fed-col-xs4 fed-col-sm3 fed-col-md3 fed-hide-xs"><a class="fed-list-pics fed-lazy fed-part-2by3" href="[videolist:link]" data-original="[videolist:pic]"><span class="fed-list-play fed-hide-xs"></span><span class="fed-list-score fed-font-xii fed-back-green">[videolist:score]</span><span class="fed-list-remarks fed-font-xii fed-text-white fed-text-center">[videolist:note]</span></a><a class="fed-list-title fed-font-xiv fed-text-center fed-text-sm-left fed-visible fed-part-eone" href="[videolist:link]">[videolist:name]</a><span class="fed-list-desc fed-font-xii fed-visible fed-part-eone fed-text-muted fed-hide-xs fed-show-sm-block">[videolist:nolinkactor]</span></li>
+          {/seacms:videolist}
+        </ul>
+      </div>
+    </div>
+    {/seacms:menulist}
+    <div class="fed-topi-info fed-part-layout fed-back-whits fed-part-rows">
+      <div class="fed-list-head fed-part-rows fed-padding">
+        <h2 class="fed-font-xvi">专题</h2>
+        <ul class="fed-part-tips fed-padding">
+          <li><a class="fed-more" href="{seacms:topiclink}">更多</a></li>
+        </ul>
+      </div>
+      <ul class="fed-list-info fed-part-rows">
+        {seacms:topiclist num=3}
+        <li class="fed-list-item fed-padding fed-col-xs12 fed-col-sm6 fed-col-md4"> <a class="fed-list-pics fed-lazy fed-part-2by1" href="[topiclist:link]" data-original="[topiclist:pic]">
+          <div class="fed-topi-back"> <span class="fed-list-title fed-visible fed-font-xvi fed-text-white  fed-text-center"><i class="fed-icon-font fed-icon-zhuanti"></i>专题</span> <span class="fed-list-name fed-visible fed-font-xvi fed-text-white fed-text-center">—— [topiclist:count]篇视频 ——</span> <span class="fed-list-count fed-visible fed-font-xvi fed-text-white fed-text-center">[topiclist:name]</span> </div>
+          </a> </li>
+        {/seacms:topiclist}
+      </ul>
+    </div>
+    <div class="fed-part-layout fed-back-whits">
+      <div class="fed-list-head fed-part-rows fed-padding">
+        <h2 class="fed-font-xvi">友情链接</h2>
+      </div>
+      <ul class="fed-part-rows">
+        {seacms:linklist type=font}
+        <li class="fed-width-x fed-padding fed-col-xs3 fed-col-sm2"><a class="fed-part-eone fed-text-line" href="[linklist:link]" target="_blank">[linklist:name]</a></li>
+        {/seacms:linklist}
+      </ul>
+    </div>
+  </div>
+</div>
+{seacms:foot}
+</body>
+</html>

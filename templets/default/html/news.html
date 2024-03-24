@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+{seacms:load block/inc_header.html}
+<title>{news:title}_{news:typename} - {seacms:sitename}</title>
+<meta name="keywords" content="{news:title},{seacms:sitename}" />
+<meta name="description" content="[newslist:outline len=100]" />
+</head>
+<body class="fed-min-width">
+{seacms:top}
+<div class="fed-main-info fed-min-width">
+  <div class="fed-part-case">
+    <div class="fed-arti-info fed-part-layout fed-back-whits">
+      <div class="fed-arti-head fed-padding fed-part-rows fed-text-sm-center fed-line-bottom">
+        <h1 class="fed-font-xxiv">{news:title}</h1>
+        <p class="fed-text-muted"> <span>{news:addtime}</span> <span>{news:typename}</span> <span>{news:hit}阅读</span> </p>
+      </div>
+      <div class="fed-arti-content fed-padding">
+        <p><span style="font-family: 微软雅黑; font-size: 14px; text-align: center; background-color: rgb(251, 251, 251);">{news:content}</span></p>
+      </div>
+    </div>
+    <div class="fed-part-layout fed-back-whits">
+      <div class="fed-list-head fed-part-rows fed-padding">
+        <h2 class="fed-font-xvi">关联文章</h2>
+      </div>
+      <ul class="fed-list-info fed-list-img fed-part-rows">
+        {seacms:newslist num=15 order=time type=all rel=n}
+        <li class="fed-list-item fed-padding fed-col-xs6 fed-col-sm4 fed-col-lg3"> <a class="fed-list-pics fed-lazy fed-part-16by9" href="[newslist:newslink]" data-original="[newslist:pic]"> <span class="fed-list-play fed-list-arts fed-hide-xs"></span> <span class="fed-list-score fed-font-xii fed-back-green">[newslist:typename]</span> <span class="fed-list-remarks fed-font-xii fed-text-white fed-text-center">[newslist:hit]阅读</span> </a> <a class="fed-list-title fed-font-xiv fed-text-center fed-text-sm-left fed-visible fed-part-eone" href="[newslist:newslink]">[newslist:title]</a> </li>
+        {/seacms:newslist}
+      </ul>
+    </div>
+    <div class="fed-part-layout fed-back-whits">
+      <div class="fed-list-head fed-part-rows fed-padding">
+        <h2 class="fed-font-xvi">关联视频</h2>
+      </div>
+      <ul class="fed-list-info fed-part-rows">
+        {seacms:videolist num=12 order=time type=all rel=v}
+        <li class="fed-list-item fed-padding fed-col-xs4 fed-col-sm3 fed-col-md2"> <a class="fed-list-pics fed-lazy fed-part-2by3" href="[videolist:link]" data-original="[videolist:pic]"> <span class="fed-list-play fed-hide-xs"></span> <span class="fed-list-score fed-font-xii fed-back-green">[videolist:douban]</span> <span class="fed-list-remarks fed-font-xii fed-text-white fed-text-center">{if:[videolist:state]==0}完结{elseif:[videolist:state]<>0}更新至[videolist:state]集{end if}</span> </a> <a class="fed-list-title fed-font-xiv fed-text-center fed-text-sm-left fed-visible fed-part-eone" href="[videolist:link]" >[videolist:name]</a> <span class="fed-list-desc fed-font-xii fed-visible fed-part-eone fed-text-muted fed-hide-xs fed-show-sm-block"> [videolist:nolinkactor]</span> </li>
+        {/seacms:videolist}
+      </ul>
+    </div>
+  </div>
+</div>
+{seacms:foot}
+</body>
+</html>

@@ -1,0 +1,56 @@
+<div class="fed-head-info fed-back-whits fed-min-width fed-box-shadow">
+  <div class="fed-part-case">
+    <div class="fed-navs-info">
+      <ul class="fed-menu-info">
+        <li class="fed-pull-left"><a class="fed-menu-logo fed-show-kind" href="/"><img width="96" height="40" alt="{seacms:sitename}" src="/zuoz/img/logo.png" /></a></li>
+        <li class="fed-pull-left"><a class="fed-menu-title fed-show-kind fed-font-xvi {if:{seacms:currenttypeid}=-444}fed-text-green{end if} fed-hide fed-show-md-block" href="/">首页</a></li>
+        {seacms:menulist type=top}
+        <li class="fed-pull-left"><a class="fed-menu-title fed-show-kind fed-font-xvi {if:[menulist:typeid]={seacms:currenttypeid}}fed-text-green{elseif:[menulist:typeid]={playpage:upid}}fed-text-green{end if} fed-hide fed-show-md-block" href="[menulist:link]">[menulist:typename]</a></li>
+        {/seacms:menulist}
+		<li class="fed-pull-left"><a class="fed-menu-title fed-show-kind fed-font-xvi fed-hide fed-show-md-block" href="{seacms:newslink}">资讯</a></li>
+        <li class="fed-pull-left"><a class="fed-menu-title fed-show-kind fed-font-xvi fed-hide fed-show-md-block" href="/gbook.php">留言</a></li>
+        <li class="fed-pull-left"><a class="fed-menu-title fed-show-kind fed-font-xvi fed-navs-navbar fed-event fed-hide fed-show-sm-block fed-hide-md" href="javascript:;">导航<span class="fed-part-move fed-edge-info fed-edge-bottom"></span></a></li>
+      </ul>
+      <div class="fed-navs-search fed-back-whits fed-hidden fed-conceal fed-show-sm-block"> <a class="fed-navs-close fed-conceal fed-hide-sm" href="javascript:;">取消</a>
+        <form class="fed-navs-form" name="search" method="get" action="/{seacms:sitepath}search.php">
+          <div class="fed-navs-cuts fed-event"> <a class="fed-navs-btns" href="javascript:;"><span class="fed-navs-name" data-type="1" data-href="/search.php">视频</span><span class="fed-part-move fed-edge-info fed-edge-bottom"></span></a> </div>
+          <input class="fed-navs-input fed-back-ashen fed-event" type="search" name="searchword" placeholder="请输入关键字" />
+          <button type="submit" class="fed-navs-submit fed-back-ashen" value="搜索"><i class="fed-icon-font fed-icon-sousuo"></i></button>
+        </form>
+      </div>
+      <div class="fed-navs-right"> <a class="fed-navs-route fed-text-black fed-event fed-hidden fed-hide-sm" href="javascript:;"></a> <a class="fed-navs-button fed-text-black fed-event fed-hide-sm fed-icon-font fed-icon-sousuo" href="javascript:;"></a> <a class="fed-navs-record fed-text-black fed-event fed-hide-xs fed-show-sm-block" href="javascript:;">看过<span class="fed-part-move fed-edge-info fed-edge-bottom"></span></a> <a class="fed-navs-record fed-text-black fed-event fed-hide-sm fed-icon-font fed-icon-lishi" href="javascript:;"></a> </div>
+    </div>
+    <div class="fed-pops-navbar fed-box-shadow fed-min-width fed-hidden fed-conceal fed-anim">
+      <div class="fed-pops-channel fed-back-whits fed-part-rows fed-line-top fed-hidden"> 选择频道 </div>
+      <a class="fed-pops-btns fed-back-whits fed-text-black fed-text-center fed-event fed-hide-sm fed-icon-font fed-icon-fenlei" href="javascript:;"></a>
+      <ul class="fed-pops-list fed-font-size fed-back-whits fed-part-rows">
+        <li class="fed-col-sm2 {if:{seacms:currenttypeid}=-444}fed-this{end if}"><a class="fed-part-eone" href="/">首页</a></li>
+        {seacms:menulist type=top}
+        <li class="fed-col-sm2 {if:[menulist:typeid]={seacms:currenttypeid}}fed-this{elseif:[menulist:typeid]={playpage:upid}}fed-this{end if}"><a class="fed-part-eone" href="[menulist:link]">[menulist:typename]</a></li>
+        {/seacms:menulist}
+        <li class="fed-col-sm2"><a class="fed-part-eone" href="/member.php">会员</a></li>
+        <li class="fed-col-sm2"><a class="fed-part-eone" href="/gbook.php">留言</a></li>
+      </ul>
+    </div>
+    <div class="fed-pops-search fed-hidden fed-conceal fed-anim fed-anim-upbit">
+      <div class="fed-pops-case fed-line-top fed-back-ashen fed-box-shadow">
+        <div class="fed-pops-key"></div>
+        <div class="fed-pops-box">
+          <div class="fed-pops-hot"> </div>
+        </div>
+      </div>
+    </div>
+    <div class="fed-pops-record fed-box-shadow fed-hidden fed-conceal fed-anim fed-anim-upbit" style="display: none;">
+      <div class="fed-pops-title fed-back-whits fed-line-top fed-line-bottom fed-part-rows"><span class="fed-col-xs9">观看记录</span><a class="historyclean fed-clear fed-event fed-text-right fed-col-xs3" href="">清空</a></div>
+      <ul class="fed-pops-list fed-back-whits">
+        <li class="fed-part-rows fed-line-bottom" id="stui_history"></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="fed-tabr-info fed-back-whits fed-min-width fed-line-top fed-hide-sm">
+  <ul class="fed-part-rows">
+    <li class="fed-text-center"><a class="fed-visible fed-text-green" href="/"><i class="fed-icon-font fed-icon-shouye"></i><span class="fed-font-xii">首页</span></a></li>
+    <li class="fed-text-center"><a class="fed-visible" href="/gbook.php"><i class="fed-icon-font fed-icon-liuyan"></i><span class="fed-font-xii">留言</span></a></li>
+  </ul>
+</div>

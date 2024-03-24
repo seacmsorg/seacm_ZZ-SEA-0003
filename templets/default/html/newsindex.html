@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+{seacms:load block/inc_header.html}
+<title>最新资讯-推荐资讯 - {seacms:sitename}</title>
+<meta name="keywords" content="最新影视资讯,电影资讯,娱乐资讯,免费电影 - {seacms:sitename}" />
+<meta name="description" content="{channelpage:description}" />
+<meta itemprop="name" property="og:title" content="{seacms:sitename}" />
+<meta itemprop="image" property="og:image" content="{seacms:siteurl}/zuoz/favicon.png" />
+<meta itemprop="description" property="og:description" content="{seacms:des}" />
+</head>
+<body class="fed-min-width">
+{seacms:top}
+<div class="fed-main-info fed-min-width">
+  <div class="fed-part-case">
+    <div class="fed-swip-container fed-part-rows">
+      <ul class="fed-swip-wrapper fed-font-size">
+      </ul>
+      <div class="fed-swip-pagin fed-font-size fed-text-right"></div>
+      <a class="fed-swip-next fed-text-white fed-text-center fed-hide-xs fed-icon-font fed-icon-you" href="javascript:;"></a> <a class="fed-swip-prev fed-text-white fed-text-center fed-hide-xs fed-icon-font fed-icon-zuo" href="javascript:;"></a> </div>
+    <div 
+		 class="fed-back-whits fed-show-xs-block fed-hide-sm">
+      <ul class="fed-part-rows">
+        {seacms:menulist by=news type=top}
+        <li class="fed-padding-x fed-col-xs3 fed-part-rows fed-text-center fed-line-top fed-line-right"> <a href="[menulist:link]">[menulist:typename]</a> </li>
+        {/seacms:menulist}
+      </ul>
+    </div>
+	  {seacms:menulist type=top by=news}
+    <div class="fed-part-layout fed-back-whits">
+      <div class="fed-list-head fed-part-rows fed-padding">
+        <h2 class="fed-font-xvi">[menulist:typename]</h2>
+        <ul class="fed-part-tips fed-padding">
+          <li> <a class="fed-more" href="[menulist:link]">更多</a> </li>
+        </ul>
+      </div>
+		{seacms:newslist num=5 order=time type=[menulist:typeid]}
+      <dl class="fed-list-arti fed-deta-info fed-deta-padding fed-line-top fed-margin fed-part-rows fed-part-over">
+        <dt class="fed-deta-images fed-list-info fed-col-xs3"> <a class="fed-list-pics fed-lazy fed-part-16by9" href="[newslist:newslink]" data-original="[newslist:pic]"> <span class="fed-list-play fed-list-arts fed-hide-xs"></span> </a> </dt>
+        <dd class="fed-deta-content fed-col-xs7 fed-col-sm8">
+          <h3 class=""><a class="fed-part-etwo fed-visible" href="[newslist:newslink]">[newslist:title]</a></h3>
+          <p class="fed-hide-xs fed-text-muted">[newslist:outline len=100]</p>
+          <span class="fed-visible fed-text-muted">[newslist:time]　[newslist:hit]阅读</span> </dd>
+      </dl>
+		{/seacms:newslist}
+    </div>
+{/seacms:menulist}
+  </div>
+</div>
+{seacms:foot}
+</body>
+</html>

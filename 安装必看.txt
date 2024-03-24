@@ -1,0 +1,3 @@
+phpMyAdmin 执行SQL语句 或者执行zuoz.sql
+
+INSERT INTO `sea_mytag` (`aid`, `tagname`, `tagdes`, `addtime`, `tagcontent`) VALUES (NULL, 'img', '【佐佐网提示您】懒加载功能开启', '1565683709', '<!--<style type=\"text/css\">.fed-list-pics{background-image:url(\"url\");background-position: 50% 50%;background-size: cover}</style>-->')

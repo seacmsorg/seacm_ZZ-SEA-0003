@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+{seacms:load block/inc_header.html}
+<title>专题首页 - {seacms:sitename}</title>
+<meta name="keywords" content="电影专题,电视剧专题,动漫专题,综艺专题,免费在线电影" />
+<meta name="description" content="提供最新最快的影视资讯和在线播放" />
+</head><body class="fed-min-width">
+{seacms:top}
+<div class="fed-main-info fed-min-width">
+  <div class="fed-part-case">
+    <div class="fed-topi-info fed-part-layout fed-back-whits fed-part-rows">
+      <div class="fed-list-head fed-part-rows fed-padding">
+        <h2 class="fed-font-xvi">专题</h2>
+        <ul class="fed-part-tips fed-padding">
+          <li><span class="fed-more"><span class="fed-hide-xs">当前第&nbsp;<span id="fed-now" class="fed-text-green fed-text-bold">{topicindexlist:page}</span>&nbsp;页，</span>共&nbsp;<span id="fed-count" class="fed-text-green fed-text-bold">{topicindexlist:recordcount}</span>&nbsp;个专题</span></li>
+        </ul>
+      </div>
+      <ul class="fed-list-info fed-part-rows">
+        {seacms:topicindexlist size=20}
+        <li class="fed-list-item fed-padding fed-col-xs12 fed-col-sm6 fed-col-md4"> <a class="fed-list-pics fed-lazy fed-part-2by1" href="[topicindexlist:link]" data-original="[topicindexlist:pic]">
+          <div class="fed-topi-back"> <span class="fed-list-title fed-visible fed-font-xvi fed-text-white fed-text-center"><i class="fed-icon-font fed-icon-zhuanti"></i>专题</span> <span class="fed-list-name fed-visible fed-font-xvi fed-text-white fed-text-center">—— [topicindexlist:count]篇文章 ——</span> <span class="fed-list-count fed-visible fed-font-xvi fed-text-white fed-text-center">[topicindexlist:name]</span> </div>
+          </a> </li>
+        {/seacms:topicindexlist}
+      </ul>
+      <div class="fed-page-info fed-text-center"> <a class="fed-btns-info fed-rims-info fed-hide fed-show-xs-inline fed-btns-disad" href="{topicindexlist:firstlink}">首页</a> <a class="fed-btns-info fed-rims-info fed-btns-disad" href="{topicindexlist:backlink}">上一页</a> {topicindexlist:pagenumber len=5} <a class="fed-btns-info fed-rims-info fed-hide fed-show-sm-inline fed-btns-green" href="[pagenumber:link]">[pagenumber:page]</a> {/topicindexlist:pagenumber} <a class="fed-btns-info fed-rims-info fed-hide fed-show-xs-inline" href="javascript:;">{topicindexlist:page}/{topicindexlist:pagecount}</a> <a class="fed-btns-info fed-rims-info" href="{topicindexlist:nextlink}">下一页</a> <a class="fed-btns-info fed-rims-info fed-hide fed-show-xs-inline" href="{topicindexlist:lastlink}">尾页</a> </div>
+      <script type="text/javascript">
+if(document.getElementById('fed-now')) document.getElementById('fed-now').innerHTML='1';
+if(document.getElementById('fed-count')) document.getElementById('fed-count').innerHTML='25';
+</script> 
+    </div>
+  </div>
+</div>
+{seacms:foot}
+</body>
+</html>

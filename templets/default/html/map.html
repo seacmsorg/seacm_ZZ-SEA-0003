@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+{seacms:load block/inc_header.html}
+<title>最近更新 - {seacms:sitename}</title>
+</head><body class="fed-min-width">
+{seacms:top}
+<div class="fed-main-info fed-min-width">
+  <div class="fed-part-case">
+    <div class="fed-part-layout fed-back-whits">
+      <div class="fed-list-head fed-part-rows fed-padding">
+        <h2 class="fed-font-xvi">最近更新</h2>
+      </div>
+      <ul class="fed-list-info fed-part-rows">
+        {seacms:videolist num=96 order=time type=all}
+        <li class="fed-list-item fed-padding fed-col-xs4 fed-col-sm3 fed-col-md2"> <a class="fed-list-pics fed-lazy fed-part-2by3" href="[videolist:link]" data-original="[videolist:pic]"> <span class="fed-list-play fed-hide-xs"></span> <span class="fed-list-score fed-font-xii fed-back-green">[videolist:douban]</span> <span class="fed-list-remarks fed-font-xii fed-text-white fed-text-center">{if:[videolist:state]==0}完结{elseif:[videolist:state]<>0}更新至[videolist:state]集{end if}</span> </a> <a class="fed-list-title fed-font-xiv fed-text-center fed-text-sm-left fed-visible fed-part-eone" href="[videolist:link]" >[videolist:name]</a> <span class="fed-list-desc fed-font-xii fed-visible fed-part-eone fed-text-muted fed-hide-xs fed-show-sm-block"> [videolist:nolinkactor]</span> </li>
+        {/seacms:videolist}
+      </ul>
+    </div>
+  </div>
+</div>
+{seacms:foot}
+</body>
+</html>

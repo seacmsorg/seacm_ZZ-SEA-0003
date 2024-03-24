@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+ <head>
+{seacms:load block/inc_header.html}
+<title>{seacms:sitename}-高级搜索</title>
+<meta name="keywords" content="{seacms:sitenotice}">
+<meta name="description" content="{seacms:sitenotice}"> 
+  <script type="text/javascript">if(document.cookie.match(new RegExp('(^| )fed_color=([^;]*)(;|$)')) != null) {var color = document.cookie.match(new RegExp('(^| )fed_color=([^;]*)(;|$)'));if(color[2] == 'white') {var elementid = document.getElementById('fed-colo-color');if(elementid) elementid.parentNode.removeChild(elementid);} else if(!document.getElementById('fed-colo-color')) {var style = document.createElement('link');style.type = 'text/css';style.rel = 'stylesheet';style.id = 'fed-colo-color';style.href = '/zuoz/css/' + unescape(color[2]) + '.css?v=3.1.5';document.getElementsByTagName('head').item(0).appendChild(style);} else document.getElementById('fed-colo-color').href = '/zuoz/css/' + unescape(color[2]) + '.css?v=3.1.5';}</script>
+ </head>
+ <body class="fed-min-width">
+ {seacms:top}
+  <div class="fed-main-info fed-min-width">
+   <div class="fed-part-case">
+    <div class="fed-casc-info fed-part-layout fed-back-whits fed-part-rows">
+     <div class="fed-casc-list fed-part-rows">
+      <dl>
+       <dt>
+        频道
+       </dt>
+{seacms:typeitemlist}
+       <dd>
+        <a {if:[typeitemlist:value]=={searchpage:typename}}class="fed-this fed-text-green"{end if} href="[typeitemlist:link]">[typeitemlist:value]</a>
+       </dd>
+{/seacms:typeitemlist}
+      </dl>
+      <dl>
+       <dt>
+        地区
+       </dt>
+{seacms:areaitemlist}
+       <dd>
+        <a {if:[areaitemlist:value]=={searchpage:area}}class="fed-this fed-text-green"{end if} href="[areaitemlist:link]">[areaitemlist:value]</a>
+       </dd>
+{/seacms:areaitemlist}
+      </dl>
+      <dl>
+       <dt>
+        年代
+       </dt>
+{seacms:yearitemlist}
+       <dd>
+        <a {if:[yearitemlist:value]=={searchpage:year}}class="fed-this fed-text-green"{end if} href="[yearitemlist:link]">[yearitemlist:value]</a>
+       </dd>
+{/seacms:yearitemlist}
+      </dl>
+     </div>
+    </div>
+    <div class="fed-part-layout fed-back-whits">
+     <div class="fed-list-head fed-part-rows fed-padding">
+      <h2 class="fed-font-xvi">
+<a {if:{searchpage:ordername}==time}class="fed-text-bold fed-text-green"{end if} href="{searchpage:order-time-link}">按时间</a>
+<a {if:{searchpage:ordername}==hit}class="fed-text-bold fed-text-green"{end if} href="{searchpage:order-hit-link}">按人气</a>
+<a {if:{searchpage:ordername}==commend}class="fed-text-bold fed-text-green"{end if} href="{searchpage:order-commend-link}">按评分</a></h2>
+     </div>
+     <ul class="fed-list-info fed-part-rows">
+{seacms:cascadelist size=48 order=time}
+      <li class="fed-list-item fed-padding fed-col-xs4 fed-col-sm3 fed-col-md2"><a class="fed-list-pics fed-lazy fed-part-2by3" href="[cascadelist:link]" data-original="[cascadelist:pic]"><span class="fed-list-play fed-hide-xs"></span><span class="fed-list-score fed-font-xii fed-back-green">[cascadelist:score]</span><span class="fed-list-remarks fed-font-xii fed-text-white fed-text-center">[cascadelist:note]</span></a><a class="fed-list-title fed-font-xiv fed-text-center fed-text-sm-left fed-visible fed-part-eone" href="[cascadelist:link]">[cascadelist:name]</a><span class="fed-list-desc fed-font-xii fed-visible fed-part-eone fed-text-muted fed-hide-xs fed-show-sm-block">[cascadelist:nolinkactor]</span></li>
+{/seacms:cascadelist}
+     </ul>
+     <div class="fed-page-info fed-text-center">
+      <a class="fed-btns-info fed-rims-info" href="{cascadelist:firstlink}">首页</a>
+      <a class="fed-btns-info fed-rims-info" href="{cascadelist:backlink}">上页</a>
+{cascadelist:pagenumber len=3}
+      <a class="fed-btns-info fed-rims-info fed-hide fed-show-sm-inline {if:{cascadelist:page}==[pagenumber:page]}fed-btns-green{end if}" href="[pagenumber:link]">[pagenumber:page]</a>
+{/cascadelist:pagenumber}
+      <a class="fed-btns-info fed-rims-info fed-hide fed-show-sm-inline fed-btns-disad" href="javascript:;">...</a>
+      <a class="fed-btns-info fed-rims-info fed-hide fed-show-sm-inline" href="{cascadelist:lastlink}">{cascadelist:pagecount}</a>
+      <a class="fed-btns-info fed-rims-info fed-hide fed-show-xs-inline" href="javascript:;">{cascadelist:page}/{cascadelist:pagecount}</a>
+      <a class="fed-btns-info fed-rims-info" href="{cascadelist:nextlink}">下页</a>
+      <a class="fed-btns-info fed-rims-info" href="{cascadelist:lastlink}">尾页</a>
+     </div>
+    </div>
+   </div>
+  </div>
+ {seacms:foot}
+ </body>
+</html>

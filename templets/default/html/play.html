@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+ <head>
+<title>{playpage:name}{playpage:part}百度云在线播放-{seacms:sitename}</title>
+<meta name="keywords" content="{playpage:name},{playpage:name}全集,{playpage:name}全集在线播放,{playpage:name}全集迅雷下载,{playpage:name}百度云播">
+<meta name="description" content="{seacms:sitename}提供{playpage:name}，{playpage:name}全集、{playpage:name}全集在线播放、{playpage:name}全集迅雷下载、{playpage:name}百度云播在线观看！"> 
+{seacms:load block/inc_header.html}
+<link rel="stylesheet" href="/zuoz/css/stui_default.css" type="text/css" />
+<script src="/{seacms:sitepath}js/play.js"></script>
+<script type="text/javascript" src="/zuoz/js/history.js"></script>
+<script type="text/javascript">var vod_name='{playpage:name len=10}',vod_url=window.location.href,vod_part='{playpage:part}';</script>
+  <script type="text/javascript">if(document.cookie.match(new RegExp('(^| )fed_color=([^;]*)(;|$)')) != null) {var color = document.cookie.match(new RegExp('(^| )fed_color=([^;]*)(;|$)'));if(color[2] == 'white') {var elementid = document.getElementById('fed-colo-color');if(elementid) elementid.parentNode.removeChild(elementid);} else if(!document.getElementById('fed-colo-color')) {var style = document.createElement('link');style.type = 'text/css';style.rel = 'stylesheet';style.id = 'fed-colo-color';style.href = '/zuoz/css/' + unescape(color[2]) + '.css?v=3.1.5';document.getElementsByTagName('head').item(0).appendChild(style);} else document.getElementById('fed-colo-color').href = '/zuoz/css/' + unescape(color[2]) + '.css?v=3.1.5';}</script>
+ </head>
+ <body class="fed-min-width">
+{seacms:top}
+  <div class="fed-main-info fed-min-width">
+   <div class="fed-part-case">
+    <div class="fed-play-info fed-part-rows fed-back-whits fed-marg-top">
+<style>
+		* {
+	margin: 0px;
+	padding: 0px;
+}
+.wrap {
+	width: 100%;
+}
+.box {
+	width: 100%;
+	height: 0px;
+			/* 16:9padding-bottom:52.25%，4:3padding-bottom:75% */
+	padding-bottom: 52.25%;
+	position: relative;
+	background: black;
+}
+.box p {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	color: #000000;
+}
+</style>
+<div class="wrap">
+			<div class="box">
+<p>{playpage:playurlinfo}{playpage:player}</p>
+                      </div>
+		</div>
+     <div class="fed-play-title fed-part-rows">
+      <ul class="fed-play-boxs fed-padding fed-part-rows fed-col-xs12 fed-col-md6">
+       <li class="fed-padding fed-col-xs5"><span class="fed-play-text fed-visible fed-font-xvi fed-part-eone">{playpage:name}{playpage:note}</span></li>
+      </ul>
+      <ul class="fed-play-boxs fed-padding fed-part-rows fed-col-xs12 fed-col-md6">
+       <li class="fed-padding fed-col-xs2"><a class="fed-btns-info fed-rims-info fed-visible fed-play-cuts fed-event" onclick="reportErr({playpage:id})" href="javascript:viod()">报错</a></li>
+       <li class="fed-padding fed-col-xs2"><a class="fed-btns-info fed-rims-info fed-visible fed-play-share fed-event" href="javascript:AddFav('{playpage:id}','')">收藏</a></li>
+       <li class="fed-padding fed-col-xs2"><a class="fed-btns-info fed-rims-info fed-visible fed-play-reno fed-event" href="javascript:;" onclick="location.reload()">刷新</a></li>
+       <li class="fed-padding fed-col-xs2 fed-col-xs3"><a class="fed-btns-info fed-rims-info fed-visible fed-play-prev" href="{playpage:preplaylink}">上集</a></li>
+       <li class="fed-padding fed-col-xs2 fed-col-xs3"><a class="fed-btns-info fed-rims-info fed-visible fed-play-next" href="{playpage:nextplaylink}">下集</a></li>
+      </ul>
+     </div>
+    </div>
+{playpage:playlist}
+    <div class="fed-tabs-info fed-rage-foot fed-part-rows fed-part-layout fed-back-whits fed-play-data" data-name="{playpage:name}" data-nums="" data-show="">
+     <ul class="fed-list-head fed-part-rows fed-padding">
+      <li class="fed-tabs-btns fed-part-curs fed-font-xvi fed-mart-v fed-text-green">[playlist:from]</li>
+      <li class="fed-part-tips fed-padding">[playlist:intro]</li>
+     </ul>
+     <div class="fed-tabs-boxs">
+      <div class="fed-tabs-item fed-drop-info fed-visible">
+       <div class="fed-drop-boxs fed-drop-tops fed-matp-v">											
+			<ul class="stui-content__playlist  sort-list column8 clearfix">
+				[playlist:link target=_self]	
+			</ul>
+	</div>
+      </div>
+     </div>
+</div>
+{/playpage:playlist}	
+    <div class="fed-tabs-info fed-rage-foot fed-part-rows fed-part-layout fed-back-whits fed-play-data" data-name="{playpage:name}" data-nums="" data-show="">
+     <ul class="fed-list-head fed-part-rows fed-padding">
+      <li class="fed-tabs-btns fed-part-curs fed-font-xvi fed-mart-v fed-text-green">剧情介绍</li>
+     </ul>
+     <div class="fed-tabs-boxs">
+      <div class="fed-tabs-item fed-drop-info fed-visible">
+       <div class="fed-drop-boxs fed-drop-tops fed-matp-v">	
+{playpage:des}
+	</div>
+      </div>
+     </div>
+</div>
+    <div class="fed-part-layout fed-back-whits">
+     <div class="fed-list-head fed-part-rows fed-padding">
+      <h2 class="fed-font-xvi">相关热播</h2>
+      <ul class="fed-part-tips fed-padding">
+       <li><a class="fed-more" href="{playpage:typelink}">更多</a></li>
+      </ul>
+     </div>
+     <ul class="fed-list-info fed-part-rows">
+{seacms:videolist type=current num=12 order=hit} 
+      <li class="fed-list-item fed-padding fed-col-xs4 fed-col-sm3 fed-col-md2"><a class="fed-list-pics fed-lazy fed-part-2by3" href="[videolist:link]" data-original="[videolist:pic]"><span class="fed-list-play fed-hide-xs"></span><span class="fed-list-score fed-font-xii fed-back-green">[videolist:score]</span><span class="fed-list-remarks fed-font-xii fed-text-white fed-text-center">[videolist:note]</span></a><a class="fed-list-title fed-font-xiv fed-text-center fed-text-sm-left fed-visible fed-part-eone" href="[videolist:link]">[videolist:name]</a><span class="fed-list-desc fed-font-xii fed-visible fed-part-eone fed-text-muted fed-hide-xs fed-show-sm-block">[videolist:nolinkactor]</span></li>
+ {/seacms:videolist}
+     </ul>
+    </div>
+   </div>
+  </div>
+{seacms:foot}
+<div style="display:none;">{playpage:hit}</div>
+ </body>
+</html>

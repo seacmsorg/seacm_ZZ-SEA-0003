@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+{seacms:load block/inc_header.html}
+<title>最新{newspagelist:typename}-最新{newspagelist:typename}推荐 - {seacms:sitename}</title>
+<meta name="keywords" content="最新{newspagelist:typename}-最新{newspagelist:typename}推荐,{seacms:sitename}" />
+<meta name="description" content="2018最新{newspagelist:typename}，公布本站最新发展动态" />
+<meta itemprop="name" property="og:title" content="最新{newspagelist:typename}-最新{newspagelist:typename}推荐 - {seacms:sitename}" />
+<meta itemprop="image" property="og:image" content="{seacms:siteurl}/zuoz/favicon.png" />
+<meta itemprop="description" property="og:description" content="{seacms:des}" />
+</head>
+<body class="fed-min-width">
+{seacms:top}
+<div class="fed-main-info fed-min-width">
+  <div class="fed-part-case">
+    <div class="fed-swip-container fed-part-rows">
+      <ul class="fed-swip-wrapper fed-font-size">
+      </ul>
+      <div class="fed-swip-pagin fed-font-size fed-text-right"></div>
+      <a class="fed-swip-next fed-text-white fed-text-center fed-hide-xs fed-icon-font fed-icon-you" href="javascript:;"></a> <a class="fed-swip-prev fed-text-white fed-text-center fed-hide-xs fed-icon-font fed-icon-zuo" href="javascript:;"></a> </div>
+    <div class="fed-back-whits fed-show-xs-block fed-hide-sm">
+      <ul class="fed-part-rows">
+      </ul>
+    </div>
+    <div class="fed-part-layout fed-back-whits">
+      <div class="fed-list-head fed-part-rows fed-padding">
+        <h2 class="fed-font-xvi">{newspagelist:typename}</h2>
+      </div>
+		{seacms:newspagelist size=15}
+      <dl class="fed-list-arti fed-deta-info fed-deta-padding fed-line-top fed-margin fed-part-rows fed-part-over">
+        <dt class="fed-deta-images fed-list-info fed-col-xs3"> <a class="fed-list-pics fed-lazy fed-part-16by9" href="[newspagelist:link]" data-original="[newspagelist:pic]"> <span class="fed-list-play fed-list-arts fed-hide-xs"></span> </a> </dt>
+        <dd class="fed-deta-content fed-col-xs7 fed-col-sm8">
+          <h3 class=""><a class="fed-part-etwo fed-visible" href="[newspagelist:link]">[newspagelist:title]</a></h3>
+          <p class="fed-hide-xs fed-text-muted">[newspagelist:outline len=100]</p>
+          <span class="fed-visible fed-text-muted">[newspagelist:time]　[newspagelist:hit]阅读</span> </dd>
+      </dl>
+      {/seacms:newspagelist}
+      <div class="fed-page-info fed-text-center"> <a class="fed-btns-info fed-rims-info fed-hide fed-show-xs-inline fed-btns-disad" href="{newspagelist:firstlink}">首页</a> <a class="fed-btns-info fed-rims-info fed-btns-disad" href="{newspagelist:backlink}">上一页</a> {newspagelist:pagenumber len=5} <a class="fed-btns-info fed-rims-info fed-hide fed-show-sm-inline fed-btns-green" href="[pagenumber:link]">[pagenumber:page]</a> {/newspagelist:pagenumber} <a class="fed-btns-info fed-rims-info fed-hide fed-show-xs-inline" href="javascript:;">{newspagelist:page}/{newspagelist:pagecount}</a> <a class="fed-btns-info fed-rims-info" href="{newspagelist:nextlink}">下一页</a> <a class="fed-btns-info fed-rims-info fed-hide fed-show-xs-inline" href="{newspagelist:lastlink}">尾页</a> </div>
+      <script type="text/javascript">
+if(document.getElementById('fed-now')) document.getElementById('fed-now').innerHTML='1';
+if(document.getElementById('fed-count')) document.getElementById('fed-count').innerHTML='14';
+</script> 
+    </div>
+  </div>
+</div>
+{seacms:foot}
+</body>
+</html>

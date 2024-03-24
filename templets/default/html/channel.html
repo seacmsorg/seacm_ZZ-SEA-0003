@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+ <head>
+{seacms:load block/inc_header.html}
+<title>{seacms:sitename}最新{channelpage:typename}_{channelpage:typename}排行榜_{channelpage:typename}排行榜前十名 - {channelpage:typename}第{channelpage:page}页_{seacms:sitename}</title>
+<meta name="keywords" content="{channelpage:typename},经典{channelpage:typename},{channelpage:typename}排行,{channelpage:typename}排行榜前十名">
+<meta name="description" content="{seacms:sitename}为您提供最新{channelpage:typename}电视剧、好看的{channelpage:typename}推荐。欢迎{channelpage:typename}的爱好者来到{seacms:sitename}观看最新{channelpage:typename}排行榜前十名。">
+  <script type="text/javascript">if(document.cookie.match(new RegExp('(^| )fed_color=([^;]*)(;|$)')) != null) {var color = document.cookie.match(new RegExp('(^| )fed_color=([^;]*)(;|$)'));if(color[2] == 'white') {var elementid = document.getElementById('fed-colo-color');if(elementid) elementid.parentNode.removeChild(elementid);} else if(!document.getElementById('fed-colo-color')) {var style = document.createElement('link');style.type = 'text/css';style.rel = 'stylesheet';style.id = 'fed-colo-color';style.href = '/zuoz/css/' + unescape(color[2]) + '.css?v=3.1.5';document.getElementsByTagName('head').item(0).appendChild(style);} else document.getElementById('fed-colo-color').href = '/zuoz/css/' + unescape(color[2]) + '.css?v=3.1.5';}</script>
+ </head>
+ <body class="fed-min-width">
+ {seacms:top}
+  <div class="fed-main-info fed-min-width">
+   <div class="fed-part-case">
+    <div class="fed-casc-info fed-part-layout fed-back-whits fed-part-rows">
+     <div class="fed-casc-list fed-part-rows">
+      <dl>
+       <dt>
+        频道
+       </dt>
+{seacms:menulist type=top}
+       <dd>
+        <a {if: {channelpage:typeid} = [menulist:typeid]}class="fed-this fed-text-green"{end if} href="[menulist:link]">[menulist:typename]</a>
+       </dd>
+{/seacms:menulist}	
+      </dl>
+      <dl>
+       <dt>
+        分类
+       </dt>
+{seacms:smallmenulist type=son}
+       <dd>
+        <a {if: {channelpage:typeid} = [smallmenulist:typeid]}class="fed-this fed-text-green"{end if} href="[smallmenulist:link]">[smallmenulist:typename]</a>
+       </dd>
+{/seacms:smallmenulist}
+      </dl>
+      <dl>
+       <dt>
+        地区
+       </dt>
+{seacms:areacaslist}
+       <dd>
+        <a href="[areacaslist:link]">[areacaslist:value]</a>
+       </dd>
+{/seacms:areacaslist}
+      </dl>
+      <dl>
+       <dt>
+        年代
+       </dt>
+{seacms:yearcaslist}
+       <dd>
+        <a href="[yearcaslist:link]">[yearcaslist:value]</a>
+       </dd>
+{/seacms:yearcaslist}
+      </dl>
+     </div>
+    </div>
+    <div class="fed-part-layout fed-back-whits">
+     <div class="fed-list-head fed-part-rows fed-padding">
+      <h2 class="fed-font-xvi">
+<a href="{channelpage:order-time-link}" class="fed-text-bold fed-text-green">按时间</a>
+<a href="{channelpage:order-hit-link}">按人气</a>
+<a href="{channelpage:order-commend-link}">按评分</a></h2>
+      <ul class="fed-part-tips fed-padding">
+       <li><span class="fed-more"><span class="fed-hide-xs">当前第 <span id="fed-now" class="fed-text-green fed-text-bold">{channellist:page}</span> 页，</span>共 <span id="fed-count" class="fed-text-green fed-text-bold">{channellist:recordcount} </span> 个影片</span></li>
+      </ul>
+     </div>
+     <ul class="fed-list-info fed-part-rows">
+{seacms:channellist size=48 order=time}
+      <li class="fed-list-item fed-padding fed-col-xs4 fed-col-sm3 fed-col-md2"><a class="fed-list-pics fed-lazy fed-part-2by3" href="[channellist:link]" data-original="[channellist:pic]"><span class="fed-list-play fed-hide-xs"></span><span class="fed-list-score fed-font-xii fed-back-green">[channellist:score]</span><span class="fed-list-remarks fed-font-xii fed-text-white fed-text-center">[channellist:note]</span></a><a class="fed-list-title fed-font-xiv fed-text-center fed-text-sm-left fed-visible fed-part-eone" href="[channellist:link]">[channellist:name]</a><span class="fed-list-desc fed-font-xii fed-visible fed-part-eone fed-text-muted fed-hide-xs fed-show-sm-block">[channellist:nolinkactor]</span></li>
+{/seacms:channellist}
+     </ul>
+     <div class="fed-page-info fed-text-center">
+      <a class="fed-btns-info fed-rims-info" href="{channellist:firstlink}">首页</a>
+      <a class="fed-btns-info fed-rims-info" href="{channellist:backlink}">上页</a>
+{channellist:pagenumber len=3}
+      <a class="fed-btns-info fed-rims-info fed-hide fed-show-sm-inline {if:{channellist:page}==[pagenumber:page]}fed-btns-green{end if}" href="[pagenumber:link]">[pagenumber:page]</a>
+{/channellist:pagenumber}
+      <a class="fed-btns-info fed-rims-info fed-hide fed-show-sm-inline fed-btns-disad" href="javascript:;">...</a>
+      <a class="fed-btns-info fed-rims-info fed-hide fed-show-sm-inline" href="{channellist:lastlink}">{channellist:pagecount}</a>
+      <a class="fed-btns-info fed-rims-info fed-hide fed-show-xs-inline" href="javascript:;">{channellist:page}/{channellist:pagecount}</a>
+      <a class="fed-btns-info fed-rims-info" href="{channellist:nextlink}">下页</a>
+      <a class="fed-btns-info fed-rims-info" href="{channellist:lastlink}">尾页</a>
+     </div>
+    </div>
+   </div>
+  </div>
+ {seacms:foot}
+ </body>
+</html>
